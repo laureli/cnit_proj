@@ -7,25 +7,25 @@ start_url = input("enter the url that you want to heckle. put it in double quote
 print type(start_url)
 
 for n in range(0, 100):
-  final_url = start_url+str(n)
+    final_url = start_url+str(n)
 
-  buffer = StringIO()
-  c = pycurl.Curl()
-  c.setopt(c.URL, final_url)
-  c.setopt(c.WRITEDATA, buffer)
-  c.perform()
-  c.close()
+    buffer = StringIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, final_url)
+    c.setopt(c.WRITEDATA, buffer)
+    c.perform()
+    c.close()
 
-  body = buffer.getvalue()
+    body = buffer.getvalue()
   # Body is a string in some encoding.
   # In Python 2, we can print it without knowing what the encoding is.
 
-  b = "Congratulations"
+    b = "Congratulations"
 
-  if b in body:
-    print final_url
-    print(body)
-    break
-  else:
-    print("nope, not yet.")
-    print("   "+final_url)
+    if b in body:
+        print final_url
+        print(body)
+        break
+    else:
+        print("nope, not yet.")
+        print("   "+final_url)
