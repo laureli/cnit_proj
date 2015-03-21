@@ -1,7 +1,10 @@
 import pycurl
 from StringIO import StringIO
 
-start_url = 'http://attack.samsclass.info/samsgame1/2/login2-active-vjfj3kj.php?pw='
+start_url = input("enter the url that you want to heckle. put it in double quotes: ")
+# start_url = 'http://attack.samsclass.info/samsgame1/2/login2-active-vjfj3kj.php?pw='
+
+print type(start_url)
 
 for n in range(0, 100):
   final_url = start_url+str(n)
