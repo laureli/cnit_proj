@@ -3,10 +3,11 @@ from StringIO import StringIO
 
 start_url = input("enter the url that you want to heckle. put it in double quotes: ")
 # start_url = 'http://attack.samsclass.info/samsgame1/2/login2-active-vjfj3kj.php?pw='
+# start_url = "https://"+ first_url
+print "starting with",start_url
 
-print type(start_url)
 
-for n in range(0, 100):
+for n in range(2000, 2112):
     final_url = start_url+str(n)
 
     buffer = StringIO()
